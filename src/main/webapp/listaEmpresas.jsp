@@ -10,8 +10,13 @@
 <title>Java Standard Taglib</title>
 </head>
 <body>
+
+	<c:if test="${not empty empresa }">
+		Empresa ${empresa} cadastrada com sucesso!!!
+	</c:if>
 	
-	Lista de empresas: <br/>
+	<br/>
+	<br/> Lista de empresas: <br/>
 	
 	<ul>
 		<c:forEach items="${ empresas }" var="empresa">
@@ -25,6 +30,11 @@
 		</c:forEach>
 		
 	</ul>
+	
+	<br/>
+	
+	<a href="/JavaServlet_Alura/bem-vindo.html">Home</a></br></br>
+	<a href="/JavaServlet_Alura/formNovaEmpresa.jsp">Nova Empresa</a>
 	
 </body>
 </html>
