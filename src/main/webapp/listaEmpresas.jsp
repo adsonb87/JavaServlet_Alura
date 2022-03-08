@@ -24,6 +24,7 @@
 			<li>
 				
 				${empresa.id} - ${empresa.nome} - <fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/> 
+				<a href="/JavaServlet_Alura/mostraEmpresa?id=${empresa.id}">edita</a>
 				<a href="/JavaServlet_Alura/removeEmpresa?id=${empresa.id}">remove</a>
 			</li>
 		
