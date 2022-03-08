@@ -12,7 +12,7 @@
 <body>
 	
 	<form action="${linkServeletNovaEmpresa}" method="post">
-		ID: <input type="text" name="id" value="${empresa.id}"/>
+		ID: <input type="hidden" name="id" value="${empresa.id}"  readonly="readonly"/>
 		Nome: <input type="text" name="nome" value="${empresa.nome}"/>
 		Data: <input type="text" name="data" 
 				value= "<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/> "/>
