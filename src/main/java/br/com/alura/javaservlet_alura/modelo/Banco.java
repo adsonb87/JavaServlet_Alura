@@ -1,4 +1,4 @@
-package br.com.alura.javaservlet_alura.servlet;
+package br.com.alura.javaservlet_alura.modelo;
 
 import java.util.ArrayList;
 import java.util.Date;

@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.alura.javaservlet_alura.modelo.Banco;
+import br.com.alura.javaservlet_alura.modelo.Empresa;
+
 /**
  * Servlet implementation class NovaEmpresaServlet
  */
