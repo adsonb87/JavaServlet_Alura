@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:url value="/novaEmpresa" var="linkServeletNovaEmpresa"/>
+<c:url value="/entrada?acao=novaEmpresa" var="linkServeletNovaEmpresa"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +17,7 @@
 	</form>
 	</br></br>
 	<a href="/JavaServlet_Alura/bem-vindo.html">Home</a></br></br>
-	<a href="/JavaServlet_Alura/listaEmpresas">Lista de empresas</
+	<a href="/JavaServlet_Alura/listaEmpresas">Lista de empresas</></br></br>
+	<a href="/JavaServlet_Alura/entrada?acao=listaEmpresas">Novo link Lista de empresas</a>
 </body>
 </html>
