@@ -37,7 +37,7 @@
 	<br/>
 	
 	<a href="/JavaServlet_Alura/bem-vindo.html">Home</a></br></br>
-	<a href="/JavaServlet_Alura/formNovaEmpresa.jsp">Nova Empresa</a>
+	<a href="/JavaServlet_Alura/entrada?acao=NovaEmpresaForm">Nova Empresa</a>
 	
 	
 </body>
