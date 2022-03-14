@@ -2,6 +2,7 @@ package br.com.alura.javaservlet_alura.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,25 +22,34 @@ public class UnicaEntradaServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
     	String paramAcao = request.getParameter("acao");
-    	
+    	String nome = null;
+    			
     	if(paramAcao.equals("listaEmpresas")) {
     		
     		ListaEmpresas acao = new ListaEmpresas();
-    		acao.executa(request, response);
+    		 nome = acao.executa(request, response);
     		
     	} else if(paramAcao.equals("removeEmpresa")) {
     		RemoveEmpresa acao = new RemoveEmpresa();
-    		acao.executa(request, response);
-    		
+    		nome = acao.executa(request, response);
     	} else if(paramAcao.equals("mostraEmpresa")) {
     		MostraEmpresa acao = new MostraEmpresa();
-    		acao.executa(request, response);
+    		nome = acao.executa(request, response);
     	} else if(paramAcao.equals("alteraEmpresa")) {
     		AlteraEmpresa acao = new AlteraEmpresa();
-    		acao.executa(request, response);
+    		nome = acao.executa(request, response);
     	} else if(paramAcao.equals("novaEmpresa")) {
     		NovaEmpresa acao = new NovaEmpresa();
-    		acao.executa(request, response);
+    		nome = acao.executa(request, response);
+    	}
+    	
+    	String[] tipoEndereco =  nome.split(":");
+    	
+    	if(tipoEndereco[0].equals("forward")) {
+    		RequestDispatcher rd = request.getRequestDispatcher(tipoEndereco[1]);
+    		rd.forward(request, response);
+    	}else  {
+    		response.sendRedirect(tipoEndereco[1]);
     	}
 	}
 
