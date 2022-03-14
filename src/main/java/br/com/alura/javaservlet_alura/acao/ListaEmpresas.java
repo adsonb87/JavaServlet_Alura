@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.alura.javaservlet_alura.modelo.Banco;
 import br.com.alura.javaservlet_alura.modelo.Empresa;
 
-public class ListaEmpresas {
+public class ListaEmpresas implements Acao{
 	
-	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("Listando empresas");
 		
 		Banco banco = new Banco();
