@@ -24,6 +24,7 @@ public class Login implements Acao {
 		
 		if(usuario != null) {		
 			System.out.println("Usuario logado "+ login);
+			request.setAttribute("usuarioLogado", usuario);
 			return "redirect:bem-vindo.html";
 		}else {
 			System.out.println("Login errado");
