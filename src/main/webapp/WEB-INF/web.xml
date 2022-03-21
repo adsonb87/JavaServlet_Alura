@@ -5,7 +5,7 @@
 		 id="WebApp_ID" version="4.0">
   <display-name>JavaServlet_Alura</display-name>
   <welcome-file-list>
-    <welcome-file>bem-vindo.html</welcome-file>
+    <welcome-file></welcome-file>
   </welcome-file-list>
   
   <servlet>
