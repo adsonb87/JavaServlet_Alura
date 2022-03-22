@@ -17,5 +17,35 @@
   	<servlet-name>OiMundoServlet</servlet-name>
   	<url-pattern>/ola</url-pattern>
   </servlet-mapping>
+
+ <filter>
+    <filter-name>MonitoramentoFilter</filter-name>
+    <filter-class>br.com.alura.javaservlet_alura.servlet.MonitoramentoFilter</filter-class>
+ </filter>
+
+ <filter-mapping>
+    <filter-name>MonitoramentoFilter</filter-name>
+    <url-pattern>/entrada</url-pattern>
+ </filter-mapping>
+
+ <filter>
+    <filter-name>AutorizacaoFilter</filter-name>
+    <filter-class>br.com.alura.javaservlet_alura.servlet.AutorizacaoFilter</filter-class>
+ </filter>
+
+ <filter-mapping>
+    <filter-name>AutorizacaoFilter</filter-name>
+    <url-pattern>/entrada</url-pattern>
+ </filter-mapping>
+ 
+  <filter>
+    <filter-name>ControladorFilter</filter-name>
+    <filter-class>br.com.alura.javaservlet_alura.servlet.ControladorFilter</filter-class>
+ </filter>
+
+ <filter-mapping>
+    <filter-name>ControladorFilter</filter-name>
+    <url-pattern>/entrada</url-pattern>
+ </filter-mapping>
   
 </web-app>
