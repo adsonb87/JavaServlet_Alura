@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="/JavaServlet_Alura/entrada?acao=Logout">Logout</a></br></br>
+<a href="/JavaServlet_Alura/entrada?acao=Logout">Logout</a></br>
 </body>
 </html>

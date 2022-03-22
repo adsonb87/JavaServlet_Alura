@@ -12,8 +12,6 @@ import br.com.alura.javaservlet_alura.modelo.Empresa;
 public class ListaEmpresas implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) {
-				
-		
 		
 		System.out.println("Listando empresas");
 		
@@ -21,7 +19,7 @@ public class ListaEmpresas implements Acao{
 		List<Empresa> lista = banco.getEmpresas();
 		
 		request.setAttribute("empresas", lista);
-		
+				
 		return "forward:listaEmpresas.jsp";
 		
 		
