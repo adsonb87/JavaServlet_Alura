@@ -22,6 +22,17 @@ import br.com.alura.javaservlet_alura.acao.Acao;
 @WebFilter("/entrada")
 public class ControladorFilter extends HttpFilter implements Filter {
        
+
+	@Override
+	public void init() throws ServletException {
+	
+	}
+	
+	@Override
+	public void destroy() {
+	
+	}
+	
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException { 	
     	
     	System.out.println("Controlador Filter");    	
