@@ -27,7 +27,7 @@ public class EmpresasService extends HttpServlet {
 		String valor = request.getHeader("Accept");
 		
 		
-		if(valor.endsWith("json")) {
+		if(valor.contains("json")) {
 			
 			//Utilizando Json
 			Gson gson = new Gson();
@@ -36,7 +36,7 @@ public class EmpresasService extends HttpServlet {
 			response.setContentType("application/json");
 			response.getWriter().print(json);
 			
-		}else if(valor.endsWith("xml")) {
+		}else if(valor.contains("xml")) {
 			
 			//Utilizando xml
 			XStream xstream = new XStream();
