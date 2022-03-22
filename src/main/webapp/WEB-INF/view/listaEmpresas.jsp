@@ -10,7 +10,9 @@
 <title>Java Standard Taglib</title>
 </head>
 <body>
-
+	<c:import url="logout-parcial.jsp"/>
+	
+	<h1>Usuario Logado: ${usuarioLogado.login}</h1>
 	<c:if test="${not empty empresa }">
 		Empresa ${empresa} cadastrada com sucesso!!!
 	</c:if>
@@ -38,7 +40,5 @@
 	
 	<a href="/JavaServlet_Alura/bem-vindo.html">Home</a></br></br>
 	<a href="/JavaServlet_Alura/entrada?acao=NovaEmpresaForm">Nova Empresa</a>
-	
-	
 </body>
 </html>

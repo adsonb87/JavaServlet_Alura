@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	<c:import url="logout-parcial.jsp"/>
 	<form action="${linkEntradaServlet}" method="post">
 		ID: <input type="hidden" name="id" value="${empresa.id}"  readonly="readonly"/>
 		Nome: <input type="text" name="nome" value="${empresa.nome}"/>

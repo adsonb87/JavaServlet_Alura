@@ -24,7 +24,7 @@ public class UnicaEntradaServlet extends HttpServlet {
 		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
 		
 		//Todas as ações que não forem referentes a login não serão permitidas.
-    	boolean acaoProtegida = !paramAcao.equals("Login") || paramAcao.equals("LoginForm");
+    	boolean acaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
     	
 		if(acaoProtegida && usuarioNaoEstaLogado) {
 			response.sendRedirect("entrada?acao=LoginForm");

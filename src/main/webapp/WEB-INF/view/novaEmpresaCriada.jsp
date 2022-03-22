@@ -10,6 +10,8 @@
 <title>Insert title here</title>
 </head>
 	<body>
+	
+		<c:import url="logout-parcial.jsp"/>
 		
 		<h1> Empresa ${ empresa } cadastrada com sucesso !!!</h1>
 		
