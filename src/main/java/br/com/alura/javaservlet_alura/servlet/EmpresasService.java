@@ -24,22 +24,32 @@ public class EmpresasService extends HttpServlet {
 		
 		List<Empresa> empresas = new Banco().getEmpresas();
 		
-		//Utilizando Json
-		Gson gson = new Gson();
-		String json = gson.toJson(empresas);
+		String valor = request.getHeader("Accept");
 		
-		response.setContentType("application/json");
-		response.getWriter().print(json);
 		
-		/*Utilizando xml
-		XStream xstream = new XStream();
-		xstream.alias("empresa", Empresa.class);
-		String xml = xstream.toXML(empresas);
-		
-		response.setContentType("application/xml");
-		response.getWriter().print(xml);
-		*/
-		
+		if(valor.endsWith("json")) {
+			
+			//Utilizando Json
+			Gson gson = new Gson();
+			String json = gson.toJson(empresas);
+			
+			response.setContentType("application/json");
+			response.getWriter().print(json);
+			
+		}else if(valor.endsWith("xml")) {
+			
+			//Utilizando xml
+			XStream xstream = new XStream();
+			xstream.alias("empresa", Empresa.class);
+			String xml = xstream.toXML(empresas);
+			
+			response.setContentType("application/xml");
+			response.getWriter().print(xml);
+			
+		}else {
+			response.setContentType("application/json");
+			response.getWriter().print("{'message':'no contente'}");
+		}
 		
 	}
 
